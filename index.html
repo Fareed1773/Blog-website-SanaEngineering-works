@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sana Engineering Works specializes in heavy lifter, crane, and loader repair services in Gadani, Balochistan.">
+  <meta name="keywords" content="Crane Repair, Loader Maintenance, Heavy Lifter Diagnostics, Engineering Services">
+  <title>Sana Engineering Works</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Global Styles */
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      color: #003366;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      z-index: 10;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6f00;
+      transform: translateY(-3px);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #003366, #ff6f00);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header img {
+      width: 120px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    header h1 {
+      font-size: 3.2em;
+      color: white;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    section:nth-child(even) {
+      background-color: #e0e0e0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .service {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      width: 100%;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .service h3 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .service p {
+      color: #555;
+    }
+
+    /* Contact Section */
+    .contact-buttons a {
+      display: inline-block;
+      margin: 15px;
+      padding: 15px 30px;
+      background: #ff6f00;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #e65c00;
+      transform: translateY(-3px);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      text-align: left;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    form button {
+      background: #003366;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #005b99;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ff6f00;
+      text-decoration: none;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header {
+        height: 250px;
+        padding: 40px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .service img {
+        height: 180px;
+      }
+
+      nav {
+        text-align: left;
+        padding: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="images/logo.jpg" alt="Sana Engineering Works Logo">
+    <h1>Sana Engineering Works</h1>
+    <p>Expert Repair for Heavy Lifters, Cranes & Loaders</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a Gadani-based workshop specializing in repair and maintenance of heavy lifters, cranes, and loaders. Our experienced technicians ensure your machinery runs safely and efficiently.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <img src="images/crane.jpg" alt="Crane Repair">
+        <h3>Crane Repair</h3>
+        <p>Inspection, maintenance, and full repairs for industrial cranes.</p>
+      </div>
+      <div class="service">
+        <img src="images/loader.jpg" alt="Loader Maintenance">
+        <h3>Loader Maintenance</h3>
+        <p>Quick servicing and parts replacement for all types of loaders.</p>
+      </div>
+      <div class="service">
+        <img src="images/lifter.jpg" alt="Heavy Lifter Diagnostics">
+        <h3>Heavy Lifter Diagnostics</h3>
+        <p>Accurate problem detection and expert solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 CEO: Fareed Ullah - 0343-3212797</p>
+    <p>📞 Owner: Sana Ullah - 0346-2000628</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/923433212797" target="_blank">WhatsApp Fareed Ullah</a>
+      <a href="https://wa.me/923462000628" target="_blank">WhatsApp Sana Ullah</a>
+    </div>
+    <p>📧 Email: <a href="mailto:faar3eed@gmail.com">faar3eed@gmail.com</a></p>
+    <p>📍 Workshop Location: Gadani, Balochistan, Pakistan</p>
+
+    <!-- Google Map Embed -->
+    <div style="margin-top: 20px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14357.720681148066!2d66.73218822896198!3d25.11676994912564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb32c588d04d82f%3A0xf6e330153cfb04e1!2sGadani%2C%20Balochistan!5e0!3m2!1sen!2s!4v1713449270224!5m2!1sen!2s"
+        width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div style="margin-top: 15px;">
+        <a href="https://www.google.com/maps/place/Gadani,+Balochistan" target="_blank"
+           style="display: inline-block; padding: 10px 20px; background-color: #003366; color: white; text-decoration: none; border-radius: 6px;">
+          📍 View on Google Maps
+        </a>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Send Us a Message</h3>
+    <form action="https://formsubmit.co/faar3eed@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Sana Engineering Works | All Rights Reserved | <a href="https://wa.me/923433212797" target="_blank">Contact us on WhatsApp</a>
+  </footer>
+
+</body>
+
+</html>
+
